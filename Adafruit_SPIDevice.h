@@ -3,6 +3,7 @@
 #ifndef Adafruit_SPIDevice_h
 #define Adafruit_SPIDevice_h
 
+namespace adafruit {
 // some modern SPI definitions don't have BitOrder enum
 #if (defined(__AVR__) && !defined(ARDUINO_ARCH_MEGAAVR)) ||                    \
     defined(ESP8266) || defined(TEENSYDUINO) || defined(SPARK) ||              \
@@ -96,4 +97,6 @@ private:
   bool _begun;
 };
 
+} // namespace adafruit
+using namespace adafruit;
 #endif // Adafruit_SPIDevice_h
